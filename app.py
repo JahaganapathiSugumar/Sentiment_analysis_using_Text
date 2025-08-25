@@ -4,8 +4,8 @@ import joblib
 app = Flask(__name__)
 
 # Load model and vectorizer
-model = joblib.load('D:/Combo_Square/Frontend_connection/Models/sentiment_classifier.pkl')
-vectorizer = joblib.load('D:/Combo_Square/Frontend_connection/Models/tfidf_vectorizer.pkl')
+model = joblib.load('Models/sentiment_classifier.pkl')
+vectorizer = joblib.load('Models/tfidf_vectorizer.pkl')
 
 @app.route('/')
 def home():
@@ -20,3 +20,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
